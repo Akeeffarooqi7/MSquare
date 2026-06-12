@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MSquare — Advanced Data & AI company transforming data chaos into business clarity. AI Strategy, Data Engineering, ML Solutions in Melbourne & Sydney.">
+  <meta name="keywords" content="AI consulting, data engineering, machine learning, business intelligence, cloud architecture, Australia, Melbourne, Sydney">
+  <meta name="author" content="MSquare">
+  <title>MSquare — Turn Your Data into Your Competitive Advantage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader" aria-label="Loading">
+    <div class="loader-content">
+      <img src="assets/logo.png" alt="MSquare" class="loader-logo-img">
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="MSquare Home">
+        <img src="assets/logo.png" alt="MSquare" class="nav-logo-img">
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+        <li role="none"><a href="#skills" class="nav-link" role="menuitem">Expertise</a></li>
+        <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="#training" class="nav-link" role="menuitem">Training</a></li>
+        <li role="none"><a href="#careers" class="nav-link" role="menuitem">Careers</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Get in Touch <i class="fas fa-arrow-right"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-badge animate-fade-up">
+          <i class="fas fa-bolt"></i> Advanced Data & AI Company
+        </div>
+        <h1 class="hero-title animate-fade-up delay-1" data-split>
+          Turn Your Data into Your<br>
+          <span class="gradient-text">Competitive Advantage</span>
+        </h1>
+        <p class="hero-subtitle animate-fade-up delay-2">
+          MSquare transforms data chaos into business clarity using AI, analytics,
+          and engineering excellence. Internationally certified experts based in Australia.
+        </p>
+        <div class="hero-buttons animate-fade-up delay-3">
+          <a href="#contact" class="btn btn-primary btn-lg magnetic">
+            Get Started <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#services" class="btn btn-glass btn-lg magnetic">
+            Explore Services
+          </a>
+        </div>
+        <div class="hero-stats animate-fade-up delay-4">
+          <div class="stat">
+            <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Expert Consultants</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-label">Australian Offices</span>
+          </div>
+        </div>
+        <div class="scroll-indicator animate-fade-up delay-4" aria-hidden="true">
+          <div class="mouse"><div class="wheel"></div></div>
+          <span>Scroll to explore</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By / Logos Marquee -->
+    <section class="trusted-section">
+      <div class="container">
+        <p class="trusted-label">Trusted by innovative organisations across Australia</p>
+      </div>
+      <div class="logo-marquee-wrapper">
+        <div class="logo-marquee">
+          <div class="marquee-item">
+            <i class="fas fa-building"></i> <span>Horizon Logistics</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-leaf"></i> <span>AusFresh Foods</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-landmark"></i> <span>Nexus Financial</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-heartbeat"></i> <span>HealthSync</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-signal"></i> <span>TelcoEdge</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-university"></i> <span>CoreBank Australia</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-industry"></i> <span>AusMine Group</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-shopping-cart"></i> <span>RetailPulse</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee-item">
+            <i class="fas fa-building"></i> <span>Horizon Logistics</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-leaf"></i> <span>AusFresh Foods</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-landmark"></i> <span>Nexus Financial</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-heartbeat"></i> <span>HealthSync</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-signal"></i> <span>TelcoEdge</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-university"></i> <span>CoreBank Australia</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-industry"></i> <span>AusMine Group</span>
+          </div>
+          <div class="marquee-item">
+            <i class="fas fa-shopping-cart"></i> <span>RetailPulse</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Large Marquee Text -->
+    <div class="text-marquee" aria-hidden="true">
+      <div class="text-marquee-track">
+        <span>Data Engineering</span>
+        <span class="marquee-dot"></span>
+        <span>Artificial Intelligence</span>
+        <span class="marquee-dot"></span>
+        <span>Machine Learning</span>
+        <span class="marquee-dot"></span>
+        <span>Cloud Architecture</span>
+        <span class="marquee-dot"></span>
+        <span>Predictive Analytics</span>
+        <span class="marquee-dot"></span>
+        <span>Business Intelligence</span>
+        <span class="marquee-dot"></span>
+        <span>Data Engineering</span>
+        <span class="marquee-dot"></span>
+        <span>Artificial Intelligence</span>
+        <span class="marquee-dot"></span>
+        <span>Machine Learning</span>
+        <span class="marquee-dot"></span>
+        <span>Cloud Architecture</span>
+        <span class="marquee-dot"></span>
+        <span>Predictive Analytics</span>
+        <span class="marquee-dot"></span>
+        <span>Business Intelligence</span>
+        <span class="marquee-dot"></span>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Who We Are</span>
+          <h2 class="section-title">Pioneering the Future of<br><span class="gradient-text">Data & Artificial Intelligence</span></h2>
+          <p class="section-subtitle">We are internationally certified Data and AI experts helping organisations unlock measurable value from their data assets.</p>
+        </div>
+        <div class="about-split reveal">
+          <div class="about-image-showcase">
+            <div class="showcase-main">
+              <img src="assets/cyber.png" alt="MSquare AI command centre" loading="lazy">
+              <div class="showcase-badge">
+                <i class="fas fa-play-circle"></i>
+                <span>See Our Work</span>
+              </div>
+            </div>
+            <div class="showcase-side">
+              <div class="showcase-small">
+                <img src="assets/dashboard.png" alt="Real-time analytics" loading="lazy">
+                <span>Live Dashboards</span>
+              </div>
+              <div class="showcase-small">
+                <img src="assets/professional.png" alt="Expert team" loading="lazy">
+                <span>Expert Team</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text-block">
+            <h3>Who We Are</h3>
+            <p class="about-lead">MSquare is an international AI & Data consulting company with offices in <strong>Melbourne</strong> and <strong>Sydney</strong>, focused on turning raw data into measurable business outcomes.</p>
+            <p>We bring together certified engineers, data scientists, and AI strategists who don't just advise — they build, deploy, and scale production-grade solutions that deliver real ROI.</p>
+            <div class="about-highlights">
+              <div class="highlight">
+                <span class="highlight-num">50+</span>
+                <span class="highlight-text">Projects Delivered</span>
+              </div>
+              <div class="highlight">
+                <span class="highlight-num">30+</span>
+                <span class="highlight-text">Certified Experts</span>
+              </div>
+              <div class="highlight">
+                <span class="highlight-num">98%</span>
+                <span class="highlight-text">Client Retention</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal" style="--delay: 0.1s">
+            <div class="about-icon-wrap">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>AI Transformation</h3>
+            <p>End-to-end AI strategy and implementation that drives real business outcomes and competitive differentiation.</p>
+          </div>
+          <div class="about-card reveal" style="--delay: 0.2s">
+            <div class="about-icon-wrap">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Data Engineering</h3>
+            <p>Robust data pipelines and architectures built for scale, reliability, and real-time analytics across your organisation.</p>
+          </div>
+          <div class="about-card reveal" style="--delay: 0.3s">
+            <div class="about-icon-wrap">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Advanced Analytics</h3>
+            <p>Transform raw data into actionable intelligence with cutting-edge analytics, dashboards, and predictive models.</p>
+          </div>
+          <div class="about-card reveal" style="--delay: 0.4s">
+            <div class="about-icon-wrap">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Automation</h3>
+            <p>Intelligent process automation powered by AI/ML to reduce costs, eliminate errors, and accelerate operations.</p>
+          </div>
+        </div>
+        <div class="about-locations reveal">
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Melbourne, Australia</span>
+          </div>
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Sydney, Australia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What We Do</span>
+          <h2 class="section-title">Services Built for the<br><span class="gradient-text">AI-First Enterprise</span></h2>
+          <p class="section-subtitle">Comprehensive solutions designed to modernise your data stack and unlock the full potential of artificial intelligence.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal" style="--delay: 0.1s">
+            <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>AI Strategy & Consulting</h3>
+            <p>Define your AI roadmap with certified experts. We assess your data maturity, identify high-impact use cases, and build a phased strategy for AI adoption.</p>
+            <div class="service-tag">Strategy</div>
+          </div>
+          <div class="service-card reveal" style="--delay: 0.15s">
+            <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Data Engineering & Pipelines</h3>
+            <p>Build scalable, reliable data pipelines that ingest, transform, and deliver data in real-time. From batch to streaming — we architect it all.</p>
+            <div class="service-tag">Engineering</div>
+          </div>
+          <div class="service-card reveal" style="--delay: 0.2s">
+            <div class="service-icon"><i class="fas fa-robot"></i></div>
+            <h3>Machine Learning Solutions</h3>
+            <p>From prototyping to production ML — we design, train, deploy, and monitor models that solve real-world business problems at scale.</p>
+            <div class="service-tag">ML / AI</div>
+          </div>
+          <div class="service-card reveal" style="--delay: 0.25s">
+            <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Business Intelligence Dashboards</h3>
+            <p>Interactive dashboards and self-service analytics that empower decision-makers with real-time insights across every department.</p>
+            <div class="service-tag">Analytics</div>
+          </div>
+          <div class="service-card reveal" style="--delay: 0.3s">
+            <div class="service-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud Data Architecture</h3>
+            <p>Multi-cloud expertise across AWS, Azure, and GCP. We design cost-optimised, secure, and scalable cloud data platforms.</p>
+            <div class="service-tag">Cloud</div>
+          </div>
+          <div class="service-card reveal" style="--delay: 0.35s">
+            <div class="service-icon"><i class="fas fa-magic"></i></div>
+            <h3>Automation & Predictive Analytics</h3>
+            <p>Leverage AI-driven automation and predictive models to forecast trends, optimise operations, and stay ahead of the competition.</p>
+            <div class="service-tag">Automation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Divider -->
+    <div class="text-marquee reverse" aria-hidden="true">
+      <div class="text-marquee-track">
+        <span>AWS</span><span class="marquee-dot"></span>
+        <span>Azure</span><span class="marquee-dot"></span>
+        <span>Google Cloud</span><span class="marquee-dot"></span>
+        <span>Databricks</span><span class="marquee-dot"></span>
+        <span>Snowflake</span><span class="marquee-dot"></span>
+        <span>Terraform</span><span class="marquee-dot"></span>
+        <span>Python</span><span class="marquee-dot"></span>
+        <span>TensorFlow</span><span class="marquee-dot"></span>
+        <span>AWS</span><span class="marquee-dot"></span>
+        <span>Azure</span><span class="marquee-dot"></span>
+        <span>Google Cloud</span><span class="marquee-dot"></span>
+        <span>Databricks</span><span class="marquee-dot"></span>
+        <span>Snowflake</span><span class="marquee-dot"></span>
+        <span>Terraform</span><span class="marquee-dot"></span>
+        <span>Python</span><span class="marquee-dot"></span>
+        <span>TensorFlow</span><span class="marquee-dot"></span>
+      </div>
+    </div>
+
+    <!-- How We Work Section -->
+    <section class="section how-we-work" id="process">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Our Process</span>
+          <h2 class="section-title">How We<br><span class="gradient-text">Deliver Results</span></h2>
+          <p class="section-subtitle">A proven, structured methodology that takes you from data chaos to competitive advantage.</p>
+        </div>
+        <div class="process-timeline">
+          <div class="process-step reveal" style="--delay: 0.1s">
+            <div class="process-number">01</div>
+            <div class="process-content">
+              <div class="process-icon"><i class="fas fa-search"></i></div>
+              <h3>Discovery & Assessment</h3>
+              <p>We deep-dive into your existing data landscape, infrastructure, and business objectives. Identify quick wins and long-term opportunities.</p>
+            </div>
+            <div class="process-line"></div>
+          </div>
+          <div class="process-step reveal" style="--delay: 0.2s">
+            <div class="process-number">02</div>
+            <div class="process-content">
+              <div class="process-icon"><i class="fas fa-drafting-compass"></i></div>
+              <h3>Strategy & Architecture</h3>
+              <p>Design a tailored roadmap with clear milestones. Define the tech stack, data architecture, and AI models needed for your goals.</p>
+            </div>
+            <div class="process-line"></div>
+          </div>
+          <div class="process-step reveal" style="--delay: 0.3s">
+            <div class="process-number">03</div>
+            <div class="process-content">
+              <div class="process-icon"><i class="fas fa-code"></i></div>
+              <h3>Build & Implement</h3>
+              <p>Our certified engineers build production-grade pipelines, ML models, and dashboards with agile sprints and continuous delivery.</p>
+            </div>
+            <div class="process-line"></div>
+          </div>
+          <div class="process-step reveal" style="--delay: 0.4s">
+            <div class="process-number">04</div>
+            <div class="process-content">
+              <div class="process-icon"><i class="fas fa-rocket"></i></div>
+              <h3>Deploy & Scale</h3>
+              <p>Launch to production with monitoring, alerting, and optimisation. We ensure your solution scales as your business grows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact / Results Visual Banner -->
+    <section class="impact-banner">
+      <div class="impact-bg">
+        <img src="assets/dashboard.png" alt="Data dashboard" loading="lazy">
+      </div>
+      <div class="impact-overlay"></div>
+      <div class="container impact-content">
+        <div class="impact-grid reveal">
+          <div class="impact-stat">
+            <span class="impact-number" data-count="98">0</span><span class="impact-suffix">%</span>
+            <span class="impact-label">Client Satisfaction</span>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number" data-count="40">0</span><span class="impact-suffix">%</span>
+            <span class="impact-label">Avg Cost Reduction</span>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number" data-count="3">0</span><span class="impact-suffix">x</span>
+            <span class="impact-label">Faster Insights</span>
+          </div>
+          <div class="impact-stat">
+            <span class="impact-number" data-count="50">0</span><span class="impact-suffix">+</span>
+            <span class="impact-label">Projects Delivered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Partners Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Technology</span>
+          <h2 class="section-title">Platforms We<br><span class="gradient-text">Build & Deploy On</span></h2>
+          <p class="section-subtitle">We partner with the world's leading technology platforms to deliver enterprise-grade solutions.</p>
+        </div>
+        <div class="tech-marquee-wrap reveal">
+          <div class="tech-row">
+            <div class="tech-logo-card">
+              <i class="fab fa-aws" style="color: #FF9900"></i>
+              <span>Amazon Web Services</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fab fa-microsoft" style="color: #00A4EF"></i>
+              <span>Microsoft Azure</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fab fa-google" style="color: #4285F4"></i>
+              <span>Google Cloud</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-snowflake" style="color: #29B5E8"></i>
+              <span>Snowflake</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-layer-group" style="color: #FF3621"></i>
+              <span>Databricks</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-network-wired" style="color: #FF6F00"></i>
+              <span>TensorFlow</span>
+            </div>
+          </div>
+          <div class="tech-row">
+            <div class="tech-logo-card">
+              <i class="fab fa-python" style="color: #3776AB"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-bolt" style="color: #E25A1C"></i>
+              <span>Apache Spark</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-fire" style="color: #EE4C2C"></i>
+              <span>PyTorch</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-chart-bar" style="color: #F2C811"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-chart-line" style="color: #E97627"></i>
+              <span>Tableau</span>
+            </div>
+            <div class="tech-logo-card">
+              <i class="fas fa-stream" style="color: #231F20"></i>
+              <span>Apache Kafka</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What Clients Say</span>
+          <h2 class="section-title">Trusted by Leading<br><span class="gradient-text">Australian Enterprises</span></h2>
+          <p class="section-subtitle">Hear from the organisations we've helped transform with data and AI.</p>
+        </div>
+        <div class="testimonial-track-wrapper">
+          <div class="testimonial-track">
+            <!-- Row 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"MSquare completely transformed how we handle data. Their AI-driven dashboards gave us real-time visibility into operations we never had before. Absolute game-changer for our business."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">JM</div>
+                <div>
+                  <h4>James Mitchell</h4>
+                  <span>CTO, Horizon Logistics — Melbourne</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"We engaged MSquare for a predictive analytics project and they delivered beyond expectations. Our supply chain costs dropped 22% in the first quarter after deployment."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">SR</div>
+                <div>
+                  <h4>Sarah Richardson</h4>
+                  <span>Head of Operations, AusFresh Foods — Sydney</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"The team's deep expertise in cloud data architecture helped us migrate 15 years of legacy data to Azure in under 3 months. Professional, certified, and incredibly responsive."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">DW</div>
+                <div>
+                  <h4>David Wong</h4>
+                  <span>VP Engineering, Nexus Financial — Melbourne</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"MSquare's corporate training program upskilled our entire analytics team in just 6 weeks. The hands-on labs and mentorship were outstanding. Highly recommend their programs."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">EP</div>
+                <div>
+                  <h4>Emma Parker</h4>
+                  <span>L&D Director, CoreBank Australia — Sydney</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"From strategy to execution, MSquare delivered an end-to-end ML solution for our customer churn prediction. We retained 30% more customers within six months. Incredible ROI."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">RK</div>
+                <div>
+                  <h4>Rajiv Kumar</h4>
+                  <span>CEO, TelcoEdge — Melbourne</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"Working with MSquare felt like having a world-class data team in-house. They integrated seamlessly, understood our challenges, and shipped production-ready pipelines on time."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">LT</div>
+                <div>
+                  <h4>Laura Thompson</h4>
+                  <span>Product Manager, HealthSync — Sydney</span>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"MSquare completely transformed how we handle data. Their AI-driven dashboards gave us real-time visibility into operations we never had before. Absolute game-changer for our business."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">JM</div>
+                <div>
+                  <h4>James Mitchell</h4>
+                  <span>CTO, Horizon Logistics — Melbourne</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"We engaged MSquare for a predictive analytics project and they delivered beyond expectations. Our supply chain costs dropped 22% in the first quarter after deployment."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">SR</div>
+                <div>
+                  <h4>Sarah Richardson</h4>
+                  <span>Head of Operations, AusFresh Foods — Sydney</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"The team's deep expertise in cloud data architecture helped us migrate 15 years of legacy data to Azure in under 3 months. Professional, certified, and incredibly responsive."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">DW</div>
+                <div>
+                  <h4>David Wong</h4>
+                  <span>VP Engineering, Nexus Financial — Melbourne</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"MSquare's corporate training program upskilled our entire analytics team in just 6 weeks. The hands-on labs and mentorship were outstanding. Highly recommend their programs."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">EP</div>
+                <div>
+                  <h4>Emma Parker</h4>
+                  <span>L&D Director, CoreBank Australia — Sydney</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why MSquare - Video Style Section -->
+    <section class="section why-msquare">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-content reveal">
+            <span class="section-tag">Why MSquare</span>
+            <h2 class="section-title">We Don't Just Consult.<br><span class="gradient-text">We Engineer Results.</span></h2>
+            <p>Unlike traditional consulting firms, we embed with your teams. Our engineers write production code, build real pipelines, and deploy models that work at scale — not just PowerPoint decks.</p>
+            <div class="why-features">
+              <div class="why-feature">
+                <div class="why-check"><i class="fas fa-check"></i></div>
+                <div>
+                  <h4>Internationally Certified Experts</h4>
+                  <p>AWS, Azure, GCP, and Databricks certified professionals</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-check"><i class="fas fa-check"></i></div>
+                <div>
+                  <h4>Production-First Approach</h4>
+                  <p>Every solution is built for real-world scale from day one</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-check"><i class="fas fa-check"></i></div>
+                <div>
+                  <h4>End-to-End Ownership</h4>
+                  <p>From strategy through deployment, monitoring, and support</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-lg">Start Your Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="why-visual reveal" style="--delay: 0.2s">
+            <div class="why-video-card">
+              <img src="assets/professional.png" alt="MSquare team at work" loading="lazy">
+              <div class="video-play-btn" aria-hidden="true">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="why-video-label">See how we work</div>
+            </div>
+            <div class="floating-card fc-1">
+              <i class="fas fa-shield-alt"></i>
+              <span>Enterprise Grade Security</span>
+            </div>
+            <div class="floating-card fc-2">
+              <i class="fas fa-award"></i>
+              <span>Certified Experts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Section -->
+    <section class="section training" id="training">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Learn & Grow</span>
+          <h2 class="section-title">AI & Data<br><span class="gradient-text">Training Programs</span></h2>
+          <p class="section-subtitle">Upskill your team with industry-leading training programs designed by certified practitioners.</p>
+        </div>
+        <div class="training-grid">
+          <div class="training-card reveal" style="--delay: 0.1s">
+            <div class="training-level beginner">Beginner</div>
+            <h3>Data Fundamentals</h3>
+            <p>Start your data journey with foundational courses in data literacy, SQL, Excel analytics, and introductory Python.</p>
+            <ul class="training-features">
+              <li><i class="fas fa-check"></i> Data Literacy Essentials</li>
+              <li><i class="fas fa-check"></i> SQL for Beginners</li>
+              <li><i class="fas fa-check"></i> Python Basics</li>
+              <li><i class="fas fa-check"></i> Excel Analytics</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Enrol Now</a>
+          </div>
+          <div class="training-card featured reveal" style="--delay: 0.2s">
+            <div class="training-level intermediate">Intermediate</div>
+            <h3>AI & ML Practitioner</h3>
+            <p>Build production-grade ML models. Cover supervised/unsupervised learning, NLP, computer vision, and MLOps fundamentals.</p>
+            <ul class="training-features">
+              <li><i class="fas fa-check"></i> Machine Learning Engineering</li>
+              <li><i class="fas fa-check"></i> Deep Learning & NLP</li>
+              <li><i class="fas fa-check"></i> MLOps & Deployment</li>
+              <li><i class="fas fa-check"></i> Cloud AI Services</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Enrol Now</a>
+          </div>
+          <div class="training-card reveal" style="--delay: 0.3s">
+            <div class="training-level advanced">Advanced</div>
+            <h3>Enterprise AI Leadership</h3>
+            <p>For leaders and architects — master AI strategy, governance, advanced architectures, and certification preparation.</p>
+            <ul class="training-features">
+              <li><i class="fas fa-check"></i> AI Strategy & Governance</li>
+              <li><i class="fas fa-check"></i> Advanced Architectures</li>
+              <li><i class="fas fa-check"></i> Certification Prep</li>
+              <li><i class="fas fa-check"></i> Corporate Workshops</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Enrol Now</a>
+          </div>
+        </div>
+        <div class="training-cta reveal">
+          <div class="cta-card">
+            <div class="cta-content">
+              <h3>Corporate Training Programs</h3>
+              <p>Customised training for your organisation. Upskill entire teams with tailored curriculum, hands-on labs, and ongoing mentorship.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-lg">Get a Custom Quote <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Divider -->
+    <section class="image-divider">
+      <img src="assets/cyber.png" alt="MSquare AI operations centre" loading="lazy">
+      <div class="image-divider-overlay"></div>
+      <div class="image-divider-text">
+        <span>Engineering the Future of Data</span>
+      </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="section careers" id="careers">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Join Our Team</span>
+          <h2 class="section-title">Build the Future<br><span class="gradient-text">With Us</span></h2>
+          <p class="section-subtitle">We're looking for passionate individuals who want to shape the future of AI and data. Remote and Australia-based roles available.</p>
+        </div>
+        <div class="careers-banner reveal">
+          <img src="assets/workspace.png" alt="MSquare team workspace" loading="lazy">
+          <div class="careers-banner-overlay">
+            <h3>Work with world-class AI engineers</h3>
+            <p>Collaborative, innovative, and impact-driven culture</p>
+          </div>
+        </div>
+        <div class="careers-grid">
+          <div class="job-card reveal" style="--delay: 0.1s">
+            <div class="job-header">
+              <div>
+                <h3>Senior Data Engineer</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-map-marker-alt"></i> Melbourne / Remote</span>
+                  <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+              </div>
+              <div class="job-type">Engineering</div>
+            </div>
+            <p>Design and build scalable data pipelines on AWS/Azure. 5+ years experience with Python, Spark, and cloud-native data tools.</p>
+            <a href="#contact" class="btn btn-outline btn-sm">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="job-card reveal" style="--delay: 0.15s">
+            <div class="job-header">
+              <div>
+                <h3>Machine Learning Engineer</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-map-marker-alt"></i> Sydney / Remote</span>
+                  <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+              </div>
+              <div class="job-type">AI / ML</div>
+            </div>
+            <p>Build and deploy production ML models. Experience with TensorFlow/PyTorch, MLOps, and end-to-end model lifecycle management.</p>
+            <a href="#contact" class="btn btn-outline btn-sm">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="job-card reveal" style="--delay: 0.2s">
+            <div class="job-header">
+              <div>
+                <h3>AI Intern</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-map-marker-alt"></i> Remote (Australia)</span>
+                  <span><i class="fas fa-clock"></i> Internship</span>
+                </div>
+              </div>
+              <div class="job-type">Internship</div>
+            </div>
+            <p>Kickstart your career in AI. Work alongside senior engineers on real projects. Currently studying or recently graduated in CS, Data Science, or related field.</p>
+            <a href="#contact" class="btn btn-outline btn-sm">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Let's Build Something<br><span class="gradient-text">Extraordinary</span></h2>
+          <p class="section-subtitle">Ready to unlock the power of your data? Reach out and let's start the conversation.</p>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contactForm" style="--delay: 0.1s" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-full">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="contact-info reveal" style="--delay: 0.2s">
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-building"></i></div>
+              <div>
+                <h4>Melbourne Office</h4>
+                <p>Melbourne, VIC, Australia</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-building"></i></div>
+              <div>
+                <h4>Sydney Office</h4>
+                <p>Sydney, NSW, Australia</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email Us</h4>
+                <p>hello@msquare.com.au</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <p>+61 3 0000 0000</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA Banner -->
+    <section class="final-cta">
+      <div class="final-cta-bg"></div>
+      <div class="container final-cta-content reveal">
+        <h2>Ready to Transform Your Data<br>into Your <span class="gradient-text">Competitive Advantage?</span></h2>
+        <p>Book a free discovery call with our AI & Data experts. No obligations — just clarity.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary btn-lg">Book a Free Consultation <i class="fas fa-arrow-right"></i></a>
+          <a href="#services" class="btn btn-glass btn-lg">View Our Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <img src="assets/logo.png" alt="MSquare" class="footer-logo-img">
+          </a>
+          <p>Transforming data chaos into business clarity. Internationally certified Data & AI experts.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#careers">Careers</a>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <a href="#training">Training</a>
+          <a href="#skills">Expertise</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Locations</h4>
+          <a href="#contact">Melbourne, VIC</a>
+          <a href="#contact">Sydney, NSW</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MSquare. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
