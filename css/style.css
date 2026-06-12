@@ -1848,25 +1848,10 @@ input, textarea { font-family: inherit; }
   .hamburger { display: block; }
   .hamburger.active span { background: var(--text); }
   .nav-cta {
-    display: inline-flex;
-    font-size: 0.7rem;
-    padding: 7px 16px;
-    border-color: var(--border);
-    color: var(--text);
-    margin-right: auto;
-    margin-left: auto;
+    display: none;
   }
   .theme-toggle { display: none; }
 
-  /* Center header: logo left, CTA center, hamburger right */
-  .nav {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-  }
-  .nav-cta {
-    justify-self: center;
-  }
   .nav-logo-img { height: 80px; }
 
   /* Mobile menu extras */
@@ -1904,10 +1889,7 @@ input, textarea { font-family: inherit; }
   }
   [data-theme="light"] .theme-toggle-mobile i { color: #3B82F6; }
   .nav-menu-cta {
-    width: 80%;
-    justify-content: center;
-    border-radius: 100px;
-    font-size: 1rem;
+    display: none;
   }
 
   .section { padding: 80px 0; }
