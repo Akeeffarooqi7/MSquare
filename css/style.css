@@ -1945,6 +1945,23 @@ input, textarea { font-family: inherit; }
   .hero-side-visuals { display: none; }
   .image-divider { height: 200px; }
   .contact-grid { grid-template-columns: 1fr; }
+  .contact-info { display: none; }
+  .footer-contact-mobile {
+    display: flex; flex-direction: column; gap: 10px;
+    margin-top: 16px;
+  }
+  .footer-contact-mobile a {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; font-weight: 500;
+    color: var(--text-secondary);
+    transition: color var(--transition);
+  }
+  .footer-contact-mobile a:hover { color: var(--text); }
+  .footer-contact-mobile i {
+    color: #3B82F6;
+    font-size: 0.75rem;
+    width: 16px;
+  }
   .cta-card { flex-direction: column; text-align: center; padding: 32px; }
 
   /* --- Mobile Horizontal Scroll Carousels --- */
@@ -2072,6 +2089,7 @@ input, textarea { font-family: inherit; }
 
 /* Hide mobile-only elements on desktop */
 .nav-menu-extras { display: none; }
+.footer-contact-mobile { display: none; }
 
 /* Hide carousel dots on desktop */
 .carousel-dots { display: none; }
