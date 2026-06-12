@@ -1781,11 +1781,6 @@ input, textarea { font-family: inherit; }
 }
 
 /* --- Responsive --- */
-/* Hide mobile-only elements on desktop */
-.nav-menu-extras { display: none; }
-.footer-contact-mobile { display: none; }
-.carousel-dots { display: none; }
-
 @media (max-width: 1024px) {
   .about-split { grid-template-columns: 1fr 1fr; gap: 40px; }
   .hero-side-visuals { display: none; }
@@ -2025,47 +2020,24 @@ input, textarea { font-family: inherit; }
   .carousel-dots {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 8px;
-    margin-top: 24px;
-    width: 100%;
-    padding: 0;
+    margin-top: 20px;
   }
   .carousel-dot {
     width: 8px; height: 8px;
     border-radius: 50%;
-    background: var(--border-hover);
+    background: var(--border);
     transition: all 0.3s ease;
     cursor: pointer;
-    flex-shrink: 0;
   }
   .carousel-dot.active {
-    width: 28px;
+    width: 24px;
     border-radius: 4px;
     background: var(--gradient);
   }
 
-  /* Testimonials: manual swipe on mobile */
-  .testimonial-track-wrapper {
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-  .testimonial-track {
-    animation: none !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 8px;
-  }
-  .testimonial-track::-webkit-scrollbar { display: none; }
-  .testimonial-card {
-    width: 85vw;
-    max-width: 320px;
-    padding: 24px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
-  }
+  .testimonial-card { width: 300px; padding: 24px; }
+  .testimonial-track { animation-duration: 30s; }
 
   .process-timeline { grid-template-columns: 1fr; gap: 32px; }
   .process-line { display: none; }
@@ -2113,6 +2085,13 @@ input, textarea { font-family: inherit; }
   .about-highlights { flex-wrap: wrap; gap: 16px; }
   .image-divider { height: 160px; }
   .image-divider-text span { font-size: 1.2rem; padding: 0 20px; }
+}
+
+/* Hide mobile-only elements on desktop */
+@media (min-width: 769px) {
+  .nav-menu-extras { display: none; }
+  .footer-contact-mobile { display: none; }
+  .carousel-dots { display: none; }
 }
 
 /* Large screens */
