@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   });
 
-  // --- Mobile Carousel Auto-Scroll + Indicators ---
+  // --- Mobile Carousel Manual Swipe + Dot Indicators ---
   if (window.matchMedia('(max-width: 768px)').matches) {
     const carousels = document.querySelectorAll('.about-grid, .services-grid, .training-grid, .tech-row');
 
@@ -185,31 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }, 50);
       }, { passive: true });
-
-      // Auto-scroll
-      let currentIndex = 0;
-      let userInteracted = false;
-      let autoInterval;
-
-      const startAuto = () => {
-        autoInterval = setInterval(() => {
-          if (userInteracted) return;
-          currentIndex = (currentIndex + 1) % items.length;
-          carousel.scrollTo({ left: items[currentIndex].offsetLeft - carousel.offsetLeft - 16, behavior: 'smooth' });
-        }, 3500);
-      };
-
-      // Pause auto on touch
-      carousel.addEventListener('touchstart', () => {
-        userInteracted = true;
-        clearInterval(autoInterval);
-      }, { passive: true });
-
-      carousel.addEventListener('touchend', () => {
-        setTimeout(() => { userInteracted = false; startAuto(); }, 5000);
-      }, { passive: true });
-
-      startAuto();
     });
   }
 

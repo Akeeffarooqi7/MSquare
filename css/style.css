@@ -1782,6 +1782,7 @@ input, textarea { font-family: inherit; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-row { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .footer-brand { grid-column: span 2; }
   .process-timeline { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .process-line { display: none; }
   .why-grid { grid-template-columns: 1fr; }
@@ -1960,7 +1961,8 @@ input, textarea { font-family: inherit; }
   .stat-number { font-size: 2rem; }
   .stat-divider { display: none; }
 
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .footer-brand { grid-column: span 2; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 }
 
