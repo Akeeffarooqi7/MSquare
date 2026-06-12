@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Mobile Carousel Manual Swipe + Dot Indicators ---
   if (window.matchMedia('(max-width: 768px)').matches) {
-    const carousels = document.querySelectorAll('.about-grid, .services-grid, .training-grid, .tech-row');
+    const carousels = document.querySelectorAll('.about-grid, .services-grid, .training-grid');
 
     carousels.forEach(carousel => {
       const items = Array.from(carousel.children).filter(el => el.nodeType === 1 && el.offsetWidth > 0);

@@ -708,50 +708,50 @@ input, textarea { font-family: inherit; }
 }
 
 /* --- Technology / Skills Section --- */
-.tech-marquee-wrap {
-  display: flex; flex-direction: column;
-  gap: 20px;
-}
-.tech-row {
+.tech-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
 }
-.tech-logo-card {
+.tech-card {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  gap: 16px;
-  padding: 40px 20px;
+  gap: 14px;
+  padding: 36px 16px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
 }
-.tech-logo-card i {
-  font-size: 2.4rem;
+.tech-icon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.tech-logo-card span {
-  font-size: 0.8rem;
+.tech-icon svg {
+  width: 40px; height: 40px;
+}
+.tech-card span {
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-secondary);
   letter-spacing: 0.01em;
   transition: color var(--transition);
 }
-.tech-logo-card:hover {
+.tech-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
   transform: translateY(-8px);
   box-shadow: 0 20px 48px rgba(0,0,0,0.12);
 }
-.tech-logo-card:hover i {
+.tech-card:hover .tech-icon {
   transform: scale(1.15);
 }
-.tech-logo-card:hover span {
+.tech-card:hover span {
   color: var(--text);
 }
-[data-theme="dark"] .tech-logo-card:hover {
+[data-theme="dark"] .tech-card:hover {
   box-shadow: 0 20px 48px rgba(59, 130, 246, 0.08);
 }
 
@@ -1780,7 +1780,7 @@ input, textarea { font-family: inherit; }
   .hero-side-visuals { display: none; }
   .about-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .tech-row { grid-template-columns: repeat(3, 1fr); }
+  .tech-grid { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .footer-brand { grid-column: span 2; }
   .process-timeline { grid-template-columns: repeat(2, 1fr); gap: 32px; }
@@ -1883,24 +1883,17 @@ input, textarea { font-family: inherit; }
     min-width: 280px;
   }
 
-  .tech-marquee-wrap { gap: 12px; }
-  .tech-row {
-    display: flex !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+  .tech-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    padding-bottom: 8px;
-    scrollbar-width: none;
   }
-  .tech-row::-webkit-scrollbar { display: none; }
-  .tech-logo-card {
-    flex: 0 0 130px;
-    scroll-snap-align: center;
-    padding: 24px 14px;
+  .tech-card {
+    padding: 24px 10px;
+    gap: 10px;
   }
-  .tech-logo-card i { font-size: 1.8rem; }
-  .tech-logo-card span { font-size: 0.7rem; }
+  .tech-icon svg { width: 32px; height: 32px; }
+  .tech-card span { font-size: 0.65rem; }
 
   /* Scroll spacer */
   .about-grid::after,
@@ -1969,10 +1962,10 @@ input, textarea { font-family: inherit; }
 @media (max-width: 480px) {
   .hero-title { font-size: 2rem; }
   .hero-buttons { flex-direction: column; align-items: center; }
-  .tech-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .tech-logo-card { padding: 24px 12px; gap: 10px; }
-  .tech-logo-card i { font-size: 1.6rem; }
-  .tech-logo-card span { font-size: 0.7rem; }
+  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .tech-card { padding: 20px 8px; gap: 8px; }
+  .tech-icon svg { width: 28px; height: 28px; }
+  .tech-card span { font-size: 0.6rem; }
   .job-header { flex-direction: column; gap: 12px; }
   .hero-stats { gap: 16px; }
   .about-image-showcase { grid-template-columns: 1fr; }
