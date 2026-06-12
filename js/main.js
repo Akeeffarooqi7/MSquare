@@ -67,8 +67,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
+  // --- Mobile: hide header on scroll down, show on hero ---
+  let lastScrollY = 0;
+  const heroSection = document.getElementById('hero');
+  const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
+
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 20);
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      if (window.scrollY > heroHeight) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+    } else {
+      header.style.transform = '';
+    }
 
     // Active nav link
     let current = '';
