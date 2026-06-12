@@ -2025,24 +2025,47 @@ input, textarea { font-family: inherit; }
   .carousel-dots {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 24px;
+    width: 100%;
+    padding: 0;
   }
   .carousel-dot {
     width: 8px; height: 8px;
     border-radius: 50%;
-    background: var(--border);
+    background: var(--border-hover);
     transition: all 0.3s ease;
     cursor: pointer;
+    flex-shrink: 0;
   }
   .carousel-dot.active {
-    width: 24px;
+    width: 28px;
     border-radius: 4px;
     background: var(--gradient);
   }
 
-  .testimonial-card { width: 300px; padding: 24px; }
-  .testimonial-track { animation-duration: 30s; }
+  /* Testimonials: manual swipe on mobile */
+  .testimonial-track-wrapper {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .testimonial-track {
+    animation: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+  }
+  .testimonial-track::-webkit-scrollbar { display: none; }
+  .testimonial-card {
+    width: 85vw;
+    max-width: 320px;
+    padding: 24px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
 
   .process-timeline { grid-template-columns: 1fr; gap: 32px; }
   .process-line { display: none; }
