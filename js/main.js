@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeIconMobile) themeIconMobile.className = iconClass;
     const mobileLabel = themeToggleMobile?.querySelector('span');
     if (mobileLabel) mobileLabel.textContent = label;
+
+    // Swap favicon based on theme
+    const faviconPath = theme === 'dark' ? 'assets/favicon-dark.png' : 'assets/favicon.png';
+    document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]').forEach(link => {
+      link.href = faviconPath;
+    });
   }
 
   if (stored) {
