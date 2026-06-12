@@ -2021,7 +2021,8 @@ input, textarea { font-family: inherit; }
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 28px;
+    margin-bottom: 12px;
   }
   .carousel-dot {
     width: 8px; height: 8px;
