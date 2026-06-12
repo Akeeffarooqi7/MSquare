@@ -15,18 +15,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const html = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
+  const themeToggleMobile = document.getElementById('themeToggleMobile');
+  const themeIconMobile = document.getElementById('themeIconMobile');
   const stored = localStorage.getItem('msquare-theme');
+
+  function updateThemeUI(theme) {
+    const iconClass = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+    const label = theme === 'light' ? 'Light Mode' : 'Dark Mode';
+    if (themeIcon) themeIcon.className = iconClass;
+    if (themeIconMobile) themeIconMobile.className = iconClass;
+    const mobileLabel = themeToggleMobile?.querySelector('span');
+    if (mobileLabel) mobileLabel.textContent = label;
+  }
+
   if (stored) {
     html.setAttribute('data-theme', stored);
-    themeIcon.className = stored === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+    updateThemeUI(stored);
   }
-  themeToggle.addEventListener('click', () => {
+
+  function toggleTheme() {
     const current = html.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('msquare-theme', next);
-    themeIcon.className = next === 'light' ? 'fas fa-sun' : 'fas fa-moon';
-  });
+    updateThemeUI(next);
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
+  if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
   // --- Mobile Menu ---
   const hamburger = document.getElementById('hamburger');
@@ -147,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Mobile Carousel Manual Swipe + Dot Indicators ---
   if (window.matchMedia('(max-width: 768px)').matches) {
-    const carousels = document.querySelectorAll('.about-grid, .services-grid, .training-grid');
+    const carousels = document.querySelectorAll('.about-grid, .services-grid, .training-grid, .tech-row');
 
     carousels.forEach(carousel => {
       const items = Array.from(carousel.children).filter(el => el.nodeType === 1 && el.offsetWidth > 0);
